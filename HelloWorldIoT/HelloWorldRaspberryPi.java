@@ -5,7 +5,6 @@ import com.pi4j.io.gpio.PinState;
 import com.pi4j.io.gpio.RaspiPin;
 
 public class HelloWorldRaspberryPi {
-
 	public static void main(String[] args) throws InterruptedException {
 
 		final GpioController gpio = GpioFactory.getInstance();
