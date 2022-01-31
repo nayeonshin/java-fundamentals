@@ -7,6 +7,7 @@ import com.pi4j.io.gpio.RaspiPin;
 public class HelloWorldRaspberryPi {
 
 	public static void main(String[] args) throws InterruptedException {
+
 		final GpioController gpio = GpioFactory.getInstance();
 		final GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, "PinLED", PinState.LOW);
 		final int SHORT_INTERVAL = 200;
@@ -78,6 +79,7 @@ public class HelloWorldRaspberryPi {
 			Thread.sleep(SHORT_INTERVAL);
 			pin.low();
 			Thread.sleep(LONG_INTERVAL);
+
 		}
 	}
 

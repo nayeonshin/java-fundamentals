@@ -2,6 +2,7 @@
 public class Variables {
 
 	public static void main(String[] args) {
+
 		int a = 1; // integer
 		System.out.println(a);
 
@@ -10,6 +11,7 @@ public class Variables {
 
 		String c = "Hello, World!";
 		System.out.println(c);
+
 	}
 
 }
