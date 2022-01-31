@@ -1,15 +1,12 @@
-import org.opentutorials.iot.DimmingLights;
 import org.opentutorials.iot.Elevator;
 import org.opentutorials.iot.Lighting;
 import org.opentutorials.iot.Security;
 
-public class GoHomeInput {
+public class GoingHome {
 
-	// Parameter (매개변수)
 	public static void main(String[] args) {
 
-		String id = args[0];
-		String brightness = args[1];
+		String id = "502 Java Apartment";
 
 		// Calls elevator
 		Elevator elevator = new Elevator(id);
@@ -25,10 +22,6 @@ public class GoHomeInput {
 
 		Lighting floorLamp = new Lighting(id + " / Floor Lamp");
 		floorLamp.on();
-
-		DimmingLights moodLamp = new DimmingLights(id + " / Mood Lamp");
-		moodLamp.setBright(Double.parseDouble(brightness));
-		moodLamp.on();
 
 	}
 
