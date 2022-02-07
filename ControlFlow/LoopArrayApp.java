@@ -9,11 +9,9 @@ public class LoopArrayApp {
 		users[2] = "nayoni";
 
 		for (int i = 0; i < users.length; i++) {
-			String user;
-			if (i == users.length - 1) {
-				user = users[i];
-			} else {
-				user = users[i] + ",";
+			String user = users[i];
+			if (i != users.length - 1) {
+				user += ",";
 			}
 			System.out.println(user);
 		}
