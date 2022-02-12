@@ -3,18 +3,21 @@ public class WhyMethod {
 
 	public static void main(String[] args) {
 
-		printATwice();
+		printTwice("a", "-");
 
-		printATwice();
+		printTwice("a", "*");
 
-		printATwice();
+		printTwice("a", "&");
+		printTwice("b", "!");
 
 	}
 
-	public static void printATwice() {
-		System.out.println("-");
-		System.out.println("a");
-		System.out.println("a");
+	public static void printTwice(String text, String delimiter) {
+
+		System.out.println(delimiter);
+		System.out.println(text);
+		System.out.println(text);
+
 	}
 
 }
