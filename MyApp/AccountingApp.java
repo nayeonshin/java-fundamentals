@@ -1,7 +1,6 @@
+class AccountingCalculator {
 
-public class AccountingApp {
-
-	public static double valueOfSupply = 10000.0; // 공급가액
+	public static double valueOfSupply; // 공급가액
 	public static double vatRate = 0.1; // 부가가치세율
 
 	public static double getVAT() {
@@ -12,11 +11,17 @@ public class AccountingApp {
 		return valueOfSupply + getVAT();
 	}
 
+}
+
+public class AccountingApp {
+
 	public static void main(String[] args) {
 
-		System.out.println("Value of supply: " + valueOfSupply);
-		System.out.println("VAT: " + getVAT());
-		System.out.println("Total: " + getTotal());
+		AccountingCalculator.valueOfSupply = 10000.0;
+
+		System.out.println("Value of supply: " + AccountingCalculator.valueOfSupply);
+		System.out.println("VAT: " + AccountingCalculator.getVAT());
+		System.out.println("Total: " + AccountingCalculator.getTotal());
 
 	}
 
