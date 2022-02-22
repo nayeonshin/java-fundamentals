@@ -7,8 +7,17 @@ class Calculator {
 }
 
 class ChildCalculator extends Calculator {
-	
-	
+
+	@Override
+	public int add(int value1, int value2) {
+		System.out.println("ChildCalculator");
+		return value1 + value2;
+	}
+
+	public int subtract(int value1, int value2) {
+		return value1 - value2;
+	}
+
 }
 
 public class InheritanceApp {
@@ -19,8 +28,10 @@ public class InheritanceApp {
 		System.out.println(calculator.add(2, 1));
 
 		ChildCalculator calculator2 = new ChildCalculator();
-		System.out.println(calculator2.add(2,  1));
-		
+		System.out.println(calculator2.add(2, 1));
+		System.out.println(calculator2.subtract(2, 1));
+		System.out.println(calculator2.add(2, 1));
+
 	}
 
 }
