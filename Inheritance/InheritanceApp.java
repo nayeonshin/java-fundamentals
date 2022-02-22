@@ -4,6 +4,11 @@ class Calculator {
 		return value1 + value2;
 	}
 
+	// Overloading
+	public int add(int value1, int value2, int value3) {
+		return value1 + value2 + value3;
+	}
+
 }
 
 class ChildCalculator extends Calculator {
@@ -26,6 +31,7 @@ public class InheritanceApp {
 
 		Calculator calculator = new Calculator();
 		System.out.println(calculator.add(2, 1));
+		System.out.println(calculator.add(2, 1, 1));
 
 		ChildCalculator calculator2 = new ChildCalculator();
 		System.out.println(calculator2.add(2, 1));
