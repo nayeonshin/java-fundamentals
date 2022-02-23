@@ -6,7 +6,7 @@ class Calculator {
 
 	// Overloading
 	public int add(int value1, int value2, int value3) {
-		return value1 + value2 + value3;
+		return this.add(value1, value2) + value3;
 	}
 
 }
@@ -16,7 +16,7 @@ class ChildCalculator extends Calculator {
 	@Override
 	public int add(int value1, int value2) {
 		System.out.println("ChildCalculator");
-		return value1 + value2;
+		return super.add(value1, value2);
 	}
 
 	public int subtract(int value1, int value2) {
