@@ -26,11 +26,11 @@ class RealCalculator implements Calculable, Printable {
 
 }
 
-class DummyCalculator implements Calculable {
+class AdvancedPrint implements Printable {
 
 	@Override
-	public int add(int value1, int value2) {
-		return 3;
+	public void print() {
+		System.out.println("This is RealCalculator.");
 	}
 
 }
@@ -39,10 +39,8 @@ public class InterfaceApp {
 
 	public static void main(String[] args) {
 
-		RealCalculator calculator = new RealCalculator();
-		System.out.println(calculator.add(2, 1));
+		Printable calculator = new AdvancedPrint();
 		calculator.print();
-		System.out.println(calculator.pi);
 
 	}
 
