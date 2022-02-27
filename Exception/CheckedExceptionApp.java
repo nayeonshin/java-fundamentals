@@ -5,12 +5,20 @@ public class CheckedExceptionApp {
 
 	public static void main(String[] args) {
 
+		FileWriter fileWriter = null;
 		try {
-			FileWriter fileWriter = new FileWriter("data.txt");
+			fileWriter = new FileWriter("data.txt");
 			fileWriter.write("Hello");
-			fileWriter.close(); // 이렇게만 하면 안 됨
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			if (fileWriter != null) {
+				try {
+					fileWriter.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 
 	}
